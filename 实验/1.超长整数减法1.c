@@ -106,8 +106,14 @@ void MinusNumberStr(char a[],char b[],char c[])
         c[k] = MinusChar(a[i],'0');
         k--;i--;
     }
-    if(c[k+1] == '0')
-        c[k+1] = ' ';
+    while(k != N - 1)
+    {
+        if(c[k+1] == '0')
+            c[k+1] = ' ';
+        else
+            break;
+        k++;
+    }
 }
 
 int Num(char a[])//¼ÆÊý¿Õ¸ñ¡£
